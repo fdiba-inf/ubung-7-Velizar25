@@ -14,10 +14,20 @@ public class RecursivePrimePrinter {
 
     public static void printPrimes(int n) {
         // Implement recursive method
+        for (int i = n; i > 0; i--) {
+          if (isPrime(n)) {
+            System.out.println(i);
+          }
+        }
     }
 
     public static boolean isPrime(int n) {
         // Implement method
-        return false;
+        for (int i = 2; i < n; i++) {
+          if (n % i == 0) {
+            return false;
+          }    
+        }
+        return true;
     }
 }
